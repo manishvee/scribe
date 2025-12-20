@@ -26,3 +26,17 @@ end, { desc = "Organize imports" })
 vim.keymap.set("n", "<S-Tab>", "<<", { noremap = true, silent = true })
 vim.keymap.set("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
 vim.keymap.set("i", "<S-Tab>", "<C-d>", { noremap = true, silent = true })
+
+
+-- manage screen splits
+vim.keymap.set("n", "<leader>v", "<C-w>v", { desc = "Split vertically" })
+vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Equalize splits" })
+vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close split" })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Previous split"})
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Next split"})
+
+-- Tab management
+vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "New tab" })
+vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close tab" })
+vim.keymap.set("n", "<leader>tl", "<cmd>tabn<CR>", { desc = "Next tab" })
+vim.keymap.set("n", "<leader>th", "<cmd>tabp<CR>", { desc = "Prev tab" })
