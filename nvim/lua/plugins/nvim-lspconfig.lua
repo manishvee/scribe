@@ -1,6 +1,9 @@
 return {
     "neovim/nvim-lspconfig",
     config = function()
+
+        local capabilities = require('blink.cmp').get_lsp_capabilities()
+
         vim.lsp.config("gopls", {
             settings = {
                 gopls = {
@@ -15,14 +18,20 @@ return {
                     },
                     staticcheck = true,
                 },
-            }
+            },
+
+            capabilities = capabilities,
         })
 
-        vim.lsp.config("rust_analyzer", {})
+        vim.lsp.config("rust_analyzer", {
+            settings = {},
+            capabilities = capabilities,
+        })
 
         vim.lsp.enable({
             "rust_analyzer",
             "gopls",
         })
+
     end
 }
