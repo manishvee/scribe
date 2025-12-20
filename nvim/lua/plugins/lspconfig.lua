@@ -9,11 +9,17 @@ return {
                     usePlaceholders = true,
                     analyses = {
                         unusedparams = true,
+                        nilness = true,
+                        unusedwrite = true,
+                        shadow = true,
                     },
                     staticcheck = true,
                 },
             }
         })
+
+        vim.lsp.config("rust_analyzer", {})
+
         vim.lsp.enable({
             "rust_analyzer",
             "gopls",
