@@ -8,3 +8,13 @@ vim.keymap.set("v", "kj", "<Esc>", { noremap = true })
 
 -- bring up the Oil file explorer in a floating window
 vim.keymap.set("n", "<leader>e", "<CMD>Oil --float<CR>", { desc = "Open Oil in floating window"})
+
+vim.keymap.set("n", "<leader>fd", vim.lsp.buf.format, {})
+vim.keymap.set("n", "<leader>oi", function()
+  vim.lsp.buf.code_action({
+    apply = true,
+    context = {
+      only = { "source.organizeImports" },
+    },
+  })
+end, { desc = "Organize imports" })
