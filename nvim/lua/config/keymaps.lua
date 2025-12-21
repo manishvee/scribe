@@ -35,8 +35,7 @@ vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close split" })
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Previous split"})
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Next split"})
 
--- Tab management
-vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "New tab" })
-vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close tab" })
-vim.keymap.set("n", "<leader>tl", "<cmd>tabn<CR>", { desc = "Next tab" })
-vim.keymap.set("n", "<leader>th", "<cmd>tabp<CR>", { desc = "Prev tab" })
+-- Buffer management
+vim.keymap.set("n", "<leader>tx", "<cmd>bdelete<CR>", { desc = "Close buffer" })
+vim.keymap.set("n", "<leader>tl", "<cmd>bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>th", "<cmd>bprevious<CR>", { desc = "Prev buffer" })
