@@ -8,6 +8,7 @@ return {
 
         require 'nvim-treesitter.configs'.setup {
             auto_install = true,
+            sync_install = true,
             ensure_installed = {
                 "dockerfile", "go", "python", "rust", "sql",
             },
