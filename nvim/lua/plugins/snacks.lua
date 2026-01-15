@@ -29,7 +29,7 @@ return {
         { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
         -- Other
         { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
-        { "<leader>t", function() Snacks.terminal() end, desc = "Toggle Terminal" },
+        { "<C-t>", function() Snacks.terminal() end, desc = "Toggle Terminal" },
     },
     opts = {
         dashboard = { enabled = true },
