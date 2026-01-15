@@ -51,5 +51,5 @@ scribe() {
 
   docker run --rm -it \
     -v "${mount_dir}:/workspace" \
-    nvim "$@"
+    scribe "$@"
 }
