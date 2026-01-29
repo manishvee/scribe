@@ -7,10 +7,9 @@ return {
         require("nvim-treesitter.install").prefer_git = true
 
         require 'nvim-treesitter.configs'.setup {
-            auto_install = true,
             sync_install = true,
             ensure_installed = {
-                "dockerfile", "go", "python", "rust", "sql",
+                "bash", "css", "csv", "dockerfile", "go", "helm", "html", "json", "lua", "make", "markdown_inline", "python", "rust", "sql", "yaml",
             },
             indent = { enable = true },
             highlight = {
