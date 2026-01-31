@@ -1,10 +1,14 @@
 return {
-    "navarasu/onedark.nvim",
-    priority = 1000, -- make sure to load this before all the other start plugins
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
     config = function()
-        require('onedark').setup {
-            style = 'darker'
-        }
-        require('onedark').load()
+        require("onedarkpro").setup({
+            colors = {
+                onedark_vivid = { bg = "#141414" }, -- yellow
+            }
+        })
+
+        vim.cmd("colorscheme onedark_vivid")
     end
 }
+
