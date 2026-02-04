@@ -9,6 +9,7 @@ return {
         { "<leader>sl", function() Snacks.picker.lines() end, desc = "Grep lines" },
         -- find
         { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+        { "<leader>fe", function() Snacks.picker.explorer() end, desc = "File Explorer" },
         { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Find Buffers" },
         -- git
         { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
