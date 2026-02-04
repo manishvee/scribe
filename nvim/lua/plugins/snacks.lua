@@ -8,7 +8,7 @@ return {
         { "<leader>sf", function() Snacks.picker.grep() end, desc = "Grep files" },
         { "<leader>sl", function() Snacks.picker.lines() end, desc = "Grep lines" },
         -- find
-        { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+        { "<leader>ff", function() Snacks.picker.files({ git = false, }) end, desc = "Find Files" },
         { "<leader>fe", function() Snacks.picker.explorer() end, desc = "File Explorer" },
         { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Find Buffers" },
         -- git
