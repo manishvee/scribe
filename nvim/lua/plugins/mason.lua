@@ -33,6 +33,17 @@ return {
                     capabilities = capabilities,
                 })
 
+                vim.lsp.config("basedpyright", {
+                    settings = {
+                        basedpyright = {
+                            analysis = {
+                                venvPath = ".",
+                                venv = ".venv",
+                            }
+                        }
+                    }
+                })
+
             end
         }
     },
