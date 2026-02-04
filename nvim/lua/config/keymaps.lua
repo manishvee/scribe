@@ -20,7 +20,9 @@ vim.keymap.set("n", "<leader>oi", function()
     },
   })
 end, { desc = "Organize imports" })
-
+vim.keymap.set("n", "<leader>d", function()
+    vim.diagnostic.open_float(0, { scope = "line" })
+end, { desc = "Show diagnostics for line" })
 
 -- Shift + Tab unindents a line
 vim.keymap.set("n", "<S-Tab>", "<<", { noremap = true, silent = true })

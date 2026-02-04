@@ -16,7 +16,22 @@ vim.opt.scrolloff = 999
 vim.opt.sidescrolloff = 999
 
 
-vim.diagnostic.config({ virtual_text = true }) -- inline diagnostics
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = false,
+    underline = true,
+
+    -- do not show popups automatically
+    update_in_insert = false,
+    severity_sort = true,
+    float = {
+        focusable = false,
+        border = "rounded",
+        source = "if_many",
+        header = "",
+        prefix = "",
+    },
+})
 
 vim.opt.cursorline = true -- highlight the current line
 
