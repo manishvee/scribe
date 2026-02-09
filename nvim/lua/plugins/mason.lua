@@ -1,7 +1,7 @@
 return {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-        ensure_installed = { "gopls", "rust-analyzer", "ruff", "basedpyright" },
+        ensure_installed = { "gopls", "rust_analyzer", "ruff", "basedpyright" },
     },
     dependencies = {
         { "mason-org/mason.nvim", opts = {} },
