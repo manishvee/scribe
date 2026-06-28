@@ -12,6 +12,7 @@ return {
         { "<leader>fe", function() Snacks.picker.explorer() end, desc = "File Explorer" },
         { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Find Buffers" },
         -- git
+        { "<leader>gg", function() Snacks.lazygit.open() end, desc = "Open LazyGit" },
         { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
         { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
         { "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git Log Line" },
@@ -33,7 +34,9 @@ return {
         { "<C-t>", function() Snacks.terminal() end, desc = "Toggle Terminal" },
     },
     opts = {
+        animate = { enabled = true },
         dashboard = { enabled = true },
+        lazygit = { enabled = true },
         notifier = {
             enabled = true,
             timeout = 3000,
