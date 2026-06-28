@@ -24,7 +24,10 @@ vim.keymap.set("n", "<leader>d", function()
     vim.diagnostic.open_float(0, { scope = "line" })
 end, { desc = "Show diagnostics for line" })
 
--- Shift + Tab unindents a line
+-- Tab indents a line; Shift + Tab unindents a line
+vim.keymap.set("n", "<Tab>", ">>", { noremap = true, silent = true })
+vim.keymap.set('v', '<Tab>', '>gv', { noremap = true, silent = true })
+
 vim.keymap.set("n", "<S-Tab>", "<<", { noremap = true, silent = true })
 vim.keymap.set("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
 vim.keymap.set("i", "<S-Tab>", "<C-d>", { noremap = true, silent = true })
@@ -41,3 +44,12 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Next split"})
 vim.keymap.set("n", "<leader>tx", "<cmd>bdelete<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>tl", "<cmd>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>th", "<cmd>bprevious<CR>", { desc = "Prev buffer" })
+
+
+-- Show function signature while typing
+vim.keymap.set('i', '<c-s>', function() vim.lsp.buf.signature_help() end, {buffer=true})
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+    vim.lsp.handlers['signature_help'], {
+        close_events = { "CursorMoved", "BufHidden", "InsertCharPre" },
+    }
+)
